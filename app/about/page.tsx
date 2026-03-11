@@ -1,50 +1,8 @@
 import Navbar from "@/components/Navbar";
-
 import Image from "next/image";
-
-const WA = "7239922999"; // Updated WhatsApp number
-
-function ImgPlaceholder({
-  prompt,
-  aspect = "aspect-video",
-  className = "",
-}: {
-  prompt: string;
-  aspect?: string;
-  className?: string;
-}) {
-  return (
-    <div
-      className={`relative ${aspect} ${className} rounded-2xl overflow-hidden bg-gradient-to-br from-stone-100 via-stone-50 to-neutral-100 border border-stone-200 flex flex-col items-center justify-center gap-4`}
-    >
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        className="w-12 h-12 text-orange-400/60 shrink-0"
-      >
-        <rect x="3" y="3" width="18" height="18" rx="2" />
-        <circle cx="8.5" cy="8.5" r="1.5" />
-        <path
-          d="M21 15l-5-5L5 21"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
-      <div className="z-10 px-6 text-center">
-        <p className="text-[10px] uppercase tracking-widest text-orange-500/70 font-bold mb-1">
-          📸 Image Prompt
-        </p>
-        <p className="text-xs text-stone-500 leading-relaxed max-w-xs">
-          {prompt}
-        </p>
-      </div>
-    </div>
-  );
-}
-
 import Footer from "../../components/Footer";
+
+const WA = "7239922999";
 
 export default function AboutPage() {
   const milestones = [

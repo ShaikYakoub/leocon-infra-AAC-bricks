@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef, useState } from "react";
 
-const WHATSAPP_NUMBER = "YOUR_CLIENT_NUMBER";
+const WHATSAPP_NUMBER = "7239922999";
 
 const links = [
   { label: "Home", href: "/" },
@@ -37,7 +37,7 @@ export default function Navbar() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-stone-200 shadow-[0_4px_24px_rgba(0,0,0,0.08)]">
-      <div className="max-w-7xl mx-auto px-4 lg:px-8 flex items-center justify-between h-20">
+      <div className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between h-20">
         {/* Logo */}
         <a href="#" className="flex items-center gap-3">
           <img
@@ -57,7 +57,7 @@ export default function Navbar() {
         </a>
 
         {/* Desktop Nav */}
-        <nav className="hidden lg:flex items-center gap-1">
+        <nav className="hidden md:flex items-center gap-1">
           {links.map((l) => (
             <a
               key={l.href}
@@ -74,7 +74,7 @@ export default function Navbar() {
           href={`https://wa.me/${WHATSAPP_NUMBER}`}
           target="_blank"
           rel="noreferrer"
-          className="hidden lg:inline-flex items-center gap-2 bg-orange-600 hover:bg-orange-500 text-white text-sm font-bold px-5 py-2.5 rounded-full transition-all duration-300 shadow-[0_0_20px_rgba(234,88,12,0.2)] hover:shadow-[0_0_28px_rgba(234,88,12,0.38)]"
+          className="hidden md:inline-flex items-center gap-2 bg-orange-600 hover:bg-orange-500 text-white text-sm font-bold px-5 py-2.5 rounded-full transition-all duration-300 shadow-[0_0_20px_rgba(234,88,12,0.2)] hover:shadow-[0_0_28px_rgba(234,88,12,0.38)]"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -92,7 +92,7 @@ export default function Navbar() {
         {!menuOpen && (
           <button
             onClick={() => setMenuOpen(true)}
-            className="lg:hidden flex flex-col justify-center items-center w-10 h-10 gap-1.5 rounded-lg hover:bg-stone-100 transition"
+            className="md:hidden flex flex-col justify-center items-center w-10 h-10 gap-1.5 rounded-lg hover:bg-stone-100 transition"
             aria-label="Open menu"
           >
             <span className="block w-6 h-0.5 bg-stone-800 transition-all duration-300" />
@@ -105,7 +105,7 @@ export default function Navbar() {
       {/* Mobile Menu */}
       <div
         ref={menuRef}
-        className={`lg:hidden transition-all duration-300 overflow-hidden bg-white/98 backdrop-blur-md border-t border-stone-100 shadow-xl ${
+        className={`md:hidden transition-all duration-300 overflow-hidden bg-white/98 backdrop-blur-md border-t border-stone-100 shadow-xl ${
           menuOpen ? "max-h-96 opacity-100 pointer-events-auto" : "max-h-0 opacity-0 pointer-events-none"
         }`}
       >
