@@ -92,7 +92,7 @@ export default function AACCalculator() {
             <span className="w-1.5 h-1.5 rounded-full bg-orange-500 animate-pulse" />
             LEOCON AAC Blocks
           </div>
-          <div className="grid grid-cols-3 gap-6 mb-4">
+          <div className="grid grid-cols-3 gap-10 mb-4">
             {[
               { label: "4-Inch", count: aac4, perM3: AAC_4_INCH_PER_M3 },
               { label: "6-Inch", count: aac6, perM3: AAC_6_INCH_PER_M3 },

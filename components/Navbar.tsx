@@ -121,7 +121,9 @@ export default function Navbar() {
       <div
         ref={menuRef}
         className={`md:hidden transition-all duration-300 overflow-hidden bg-white/98 backdrop-blur-md border-t border-stone-100 shadow-xl ${
-          menuOpen ? "max-h-96 opacity-100 pointer-events-auto" : "max-h-0 opacity-0 pointer-events-none"
+          menuOpen
+            ? "max-h-96 opacity-100 pointer-events-auto"
+            : "max-h-0 opacity-0 pointer-events-none"
         }`}
       >
         <nav className="flex flex-col px-4 py-4 gap-1">
