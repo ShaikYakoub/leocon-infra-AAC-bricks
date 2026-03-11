@@ -88,18 +88,22 @@ export default function Navbar() {
           Get a Quote
         </a>
 
-        {/* Mobile Hamburger */}
-        {!menuOpen && (
-          <button
-            onClick={() => setMenuOpen(true)}
-            className="md:hidden flex flex-col justify-center items-center w-10 h-10 gap-1.5 rounded-lg hover:bg-stone-100 transition"
-            aria-label="Open menu"
-          >
-            <span className="block w-6 h-0.5 bg-stone-800 transition-all duration-300" />
-            <span className="block w-6 h-0.5 bg-stone-800 transition-all duration-300" />
-            <span className="block w-6 h-0.5 bg-stone-800 transition-all duration-300" />
-          </button>
-        )}
+        {/* Mobile Hamburger / Close Button */}
+        <button
+          onClick={() => setMenuOpen(!menuOpen)}
+          className="md:hidden flex flex-col justify-center items-center w-10 h-10 gap-1.5 rounded-lg hover:bg-stone-100 transition"
+          aria-label={menuOpen ? "Close menu" : "Open menu"}
+        >
+          {menuOpen ? (
+            <span className="text-2xl text-stone-800">✕</span>
+          ) : (
+            <>
+              <span className="block w-6 h-0.5 bg-stone-800 transition-all duration-300" />
+              <span className="block w-6 h-0.5 bg-stone-800 transition-all duration-300" />
+              <span className="block w-6 h-0.5 bg-stone-800 transition-all duration-300" />
+            </>
+          )}
+        </button>
       </div>
 
       {/* Mobile Menu */}
@@ -109,17 +113,6 @@ export default function Navbar() {
           menuOpen ? "max-h-96 opacity-100 pointer-events-auto" : "max-h-0 opacity-0 pointer-events-none"
         }`}
       >
-        {/* Dedicated close button for mobile menu */}
-        {menuOpen && (
-          <button
-            onClick={() => setMenuOpen(false)}
-            className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center text-stone-800 bg-stone-100 rounded-full shadow hover:bg-stone-200 transition z-50"
-            aria-label="Close menu"
-          >
-            <span className="text-2xl">&#10005;</span>
-          </button>
-        )}
-        
         <nav className="flex flex-col px-4 py-4 gap-1">
           {links.map((l) => (
             <a
