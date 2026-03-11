@@ -50,9 +50,47 @@ function ImgPlaceholder({
 export default function ProductsPage() {
   const products = [
     {
+      size: "2 Inch",
+      dimensions: "24 × 8 × 2",
+      blocksPerM3: 162,
+      marketRate: "₹30 - ₹40",
+      avgValue: "₹3,500",
+      weight: "~3 kg per block",
+      use: "False Walls & Panels",
+      description:
+        "Perfect for false walls, panels, and non-structural elements. Extremely lightweight and easy to handle for creative interior solutions.",
+      features: [
+        "Extremely lightweight",
+        "Ideal for panels",
+        "Easy handling",
+        "Creative interior solutions",
+      ],
+      image: "/images/products/2-inch-block.jpg",
+      imageAlt: "2 inch AAC block",
+    },
+    {
+      size: "3 Inch",
+      dimensions: "24 × 8 × 3",
+      blocksPerM3: 108,
+      marketRate: "₹40 - ₹50",
+      avgValue: "₹4,000",
+      weight: "~4.5 kg per block",
+      use: "Light Partition Walls",
+      description:
+        "Best for ultra-light partition walls and temporary structures. Easy to cut and install, ideal for flexible interior layouts.",
+      features: [
+        "Ultra-lightweight",
+        "Quick installation",
+        "Flexible for temporary walls",
+        "Easy to cut and shape",
+      ],
+      image: "/images/products/3-inch-block.jpg",
+      imageAlt: "3 inch AAC block",
+    },
+    {
       size: "4 Inch",
       dimensions: "24 × 8 × 4",
-      blocksPerM3: 83,
+      blocksPerM3: 81,
       marketRate: "₹50 - ₹60",
       avgValue: "₹4,500",
       weight: "~6 kg per block",
@@ -71,7 +109,7 @@ export default function ProductsPage() {
     {
       size: "6 Inch",
       dimensions: "24 × 8 × 6",
-      blocksPerM3: 55,
+      blocksPerM3: 54,
       marketRate: "₹70 - ₹80",
       avgValue: "₹5,500",
       weight: "~9 kg per block",
@@ -243,7 +281,7 @@ export default function ProductsPage() {
                 <strong className="text-red-600">590 bricks</strong>. With
                 LEOCON AAC Blocks, you need just{" "}
                 <strong className="text-orange-600">
-                  83, 55, or 36 blocks
+                  83, 55, 36, 108, or 162 blocks
                 </strong>{" "}
                 depending on wall thickness — saving time, labour, and
                 structural load.
@@ -258,6 +296,61 @@ export default function ProductsPage() {
                 <span className="px-3 py-1.5 text-xs font-semibold bg-orange-100 border border-orange-200 text-orange-700 rounded-full">
                   36 × 9-Inch
                 </span>
+                <span className="px-3 py-1.5 text-xs font-semibold bg-orange-100 border border-orange-200 text-orange-700 rounded-full">
+                  108 × 3-Inch
+                </span>
+                <span className="px-3 py-1.5 text-xs font-semibold bg-orange-100 border border-orange-200 text-orange-700 rounded-full">
+                  162 × 2-Inch
+                </span>
+              </div>
+            </div>
+          </div>
+          {/* Stats Grid */}
+          <div className="mt-12 grid grid-cols-3 grid-rows-2 gap-8 w-full">
+            <div className="bg-orange-50 border border-orange-200 rounded-2xl p-8 text-center">
+              <div className="text-4xl font-black text-orange-600 mb-2">
+                50 m³
+              </div>
+              <div className="text-stone-700 font-semibold">
+                Daily Production Capacity
+              </div>
+            </div>
+            <div className="bg-orange-50 border border-orange-200 rounded-2xl p-8 text-center">
+              <div className="text-4xl font-black text-orange-600 mb-2">
+                15,000 m³
+              </div>
+              <div className="text-stone-700 font-semibold">Annual Output</div>
+            </div>
+            <div className="bg-orange-50 border border-orange-200 rounded-2xl p-8 text-center">
+              <div className="text-4xl font-black text-orange-600 mb-2">
+                70%
+              </div>
+              <div className="text-stone-700 font-semibold">
+                Fly Ash Content
+              </div>
+            </div>
+            <div className="bg-orange-50 border border-orange-200 rounded-2xl p-8 text-center">
+              <div className="text-4xl font-black text-orange-600 mb-2">
+                2.5×
+              </div>
+              <div className="text-stone-700 font-semibold">
+                Lighter than Bricks
+              </div>
+            </div>
+            <div className="bg-orange-50 border border-orange-200 rounded-2xl p-8 text-center">
+              <div className="text-4xl font-black text-orange-600 mb-2">
+                40%
+              </div>
+              <div className="text-stone-700 font-semibold">
+                Structural Cost Savings
+              </div>
+            </div>
+            <div className="bg-orange-50 border border-orange-200 rounded-2xl p-8 text-center">
+              <div className="text-4xl font-black text-orange-600 mb-2">
+                12 hrs
+              </div>
+              <div className="text-stone-700 font-semibold">
+                Autoclave Curing Time
               </div>
             </div>
           </div>
@@ -269,7 +362,7 @@ export default function ProductsPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="font-display text-5xl md:text-6xl font-black text-stone-900 mb-5">
-              Three Sizes. Every Application.
+              Sizes For All Your Application Needs
             </h2>
             <p className="text-stone-500 text-lg max-w-2xl mx-auto">
               Choose the right AAC block size for your project — from interior

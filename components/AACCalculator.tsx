@@ -56,9 +56,6 @@ export default function AACCalculator() {
               onChange={handleVolumeChange}
               className="w-44 text-center text-5xl font-black text-stone-900 bg-transparent border-b-2 border-orange-500 focus:outline-none focus:border-orange-400 pb-2 transition-colors [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
             />
-            <span className="absolute -right-10 bottom-3 text-xl font-bold text-stone-400">
-              m³
-            </span>
           </div>
           <button
             onClick={() => setVolume((v) => Math.round((v + 10) * 10) / 10)}
@@ -71,11 +68,8 @@ export default function AACCalculator() {
         <p className="text-xs text-stone-400 mt-4">
           Adjust in steps of 10, or type your value directly
         </p>
-      </div>
 
-      {/* Results */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-stone-100">
-        {/* Red Bricks */}
+        {/* Results */}
         <div className="bg-white p-10 text-center">
           <div className="inline-flex items-center gap-2 bg-red-50 border border-red-200 text-red-600 text-[10px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full mb-6">
             <span className="w-1.5 h-1.5 rounded-full bg-red-400" />
@@ -93,7 +87,7 @@ export default function AACCalculator() {
         </div>
 
         {/* AAC Blocks */}
-        <div className="bg-stone-50 p-10 text-center">
+        <div className="bg-stone-50 p-10 text-center mt-2">
           <div className="inline-flex items-center gap-2 bg-orange-100 border border-orange-200 text-orange-600 text-[10px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full mb-6">
             <span className="w-1.5 h-1.5 rounded-full bg-orange-500 animate-pulse" />
             LEOCON AAC Blocks

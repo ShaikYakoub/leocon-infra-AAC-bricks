@@ -119,7 +119,6 @@ export default function AboutPage() {
           </p>
         </div>
       </section>
-
       {/* Mission & Vision */}
       <section className="py-28 px-4 md:px-12">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -169,7 +168,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
       {/* Timeline */}
       <section className="py-28 px-4 md:px-12 bg-stone-50 border-y border-stone-200">
         <div className="max-w-5xl mx-auto">
@@ -207,7 +205,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
       {/* Core Values */}
       <section className="py-28 px-4 md:px-12">
         <div className="max-w-7xl mx-auto">
@@ -240,34 +237,8 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
       {/* Stats Grid */}
-      <section className="py-28 px-4 md:px-12 bg-gradient-to-b from-white to-stone-50 border-y border-stone-200">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="font-display text-5xl md:text-6xl font-black text-stone-900 mb-5">
-              LEOCON by the Numbers
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            {stats.map((stat) => (
-              <div
-                key={stat.label}
-                className="bg-white border border-stone-200 rounded-2xl p-6 text-center hover:border-orange-300 hover:shadow-lg transition-all duration-300"
-              >
-                <p className="text-4xl font-black text-orange-600 mb-2">
-                  {stat.value}
-                </p>
-                <p className="text-xs uppercase tracking-wider text-stone-500 font-semibold leading-tight">
-                  {stat.label}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
+      // ...existing code...
       {/* Fly Ash Impact */}
       <section className="py-28 px-4 md:px-12">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -330,7 +301,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
       {/* Location & Facility */}
       <section className="py-28 px-4 md:px-12 bg-stone-50 border-y border-stone-200">
         <div className="max-w-7xl mx-auto">
@@ -452,7 +422,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
       {/* CTA with background image */}
       <section
         className="py-20 px-4 md:px-12 border-t border-orange-600/20 relative bg-[#1c1410]"

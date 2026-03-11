@@ -5,11 +5,11 @@ import React, { useEffect, useRef, useState } from "react";
 const WHATSAPP_NUMBER = "YOUR_CLIENT_NUMBER";
 
 const links = [
+  { label: "Home", href: "/" },
   { label: "Products", href: "/products" },
   { label: "About", href: "/about" },
   { label: "Process", href: "/process" },
   { label: "Calculator", href: "/#calculator" },
-  { label: "Contact", href: "/#contact" },
 ];
 
 export default function Navbar() {
@@ -36,31 +36,16 @@ export default function Navbar() {
   }, [menuOpen]);
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled
-          ? "bg-white/95 backdrop-blur-md border-b border-stone-200 shadow-[0_4px_24px_rgba(0,0,0,0.08)]"
-          : "bg-transparent"
-      }`}
-    >
-      <div className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between h-20">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-stone-200 shadow-[0_4px_24px_rgba(0,0,0,0.08)]">
+      <div className="max-w-7xl mx-auto px-4 lg:px-8 flex items-center justify-between h-20">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-3 group">
-          <div className="w-9 h-9 rounded-lg bg-orange-600 flex items-center justify-center shadow-[0_0_16px_rgba(234,88,12,0.35)] group-hover:shadow-[0_0_24px_rgba(234,88,12,0.55)] transition-all duration-300">
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              className="w-5 h-5 text-white"
-              stroke="currentColor"
-              strokeWidth="2.5"
-            >
-              <path
-                d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11M8 14v4M12 14v4M16 14v4"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </div>
+        <a href="#" className="flex items-center gap-3">
+          <img
+            src="/logo.png"
+            alt="LEOCON Logo"
+            className="w-16 h-16 object-contain"
+            style={{ background: "none" }}
+          />
           <div>
             <span className="text-stone-900 font-black text-lg tracking-tight leading-none">
               LEOCON
@@ -72,7 +57,7 @@ export default function Navbar() {
         </a>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-1">
+        <nav className="hidden lg:flex items-center gap-1">
           {links.map((l) => (
             <a
               key={l.href}
@@ -89,7 +74,7 @@ export default function Navbar() {
           href={`https://wa.me/${WHATSAPP_NUMBER}`}
           target="_blank"
           rel="noreferrer"
-          className="hidden md:inline-flex items-center gap-2 bg-orange-600 hover:bg-orange-500 text-white text-sm font-bold px-5 py-2.5 rounded-full transition-all duration-300 shadow-[0_0_20px_rgba(234,88,12,0.2)] hover:shadow-[0_0_28px_rgba(234,88,12,0.38)]"
+          className="hidden lg:inline-flex items-center gap-2 bg-orange-600 hover:bg-orange-500 text-white text-sm font-bold px-5 py-2.5 rounded-full transition-all duration-300 shadow-[0_0_20px_rgba(234,88,12,0.2)] hover:shadow-[0_0_28px_rgba(234,88,12,0.38)]"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -104,29 +89,36 @@ export default function Navbar() {
         </a>
 
         {/* Mobile Hamburger */}
-        <button
-          onClick={() => setMenuOpen((o) => !o)}
-          className="md:hidden flex flex-col justify-center items-center w-10 h-10 gap-1.5 rounded-lg hover:bg-stone-100 transition"
-          aria-label="Toggle menu"
-        >
-          <span
-            className={`block w-6 h-0.5 bg-stone-800 transition-all duration-300 ${menuOpen ? "rotate-45 translate-y-2" : ""}`}
-          />
-          <span
-            className={`block w-6 h-0.5 bg-stone-800 transition-all duration-300 ${menuOpen ? "opacity-0" : ""}`}
-          />
-          <span
-            className={`block w-6 h-0.5 bg-stone-800 transition-all duration-300 ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`}
-          />
-        </button>
+        {!menuOpen && (
+          <button
+            onClick={() => setMenuOpen(true)}
+            className="lg:hidden flex flex-col justify-center items-center w-10 h-10 gap-1.5 rounded-lg hover:bg-stone-100 transition"
+            aria-label="Open menu"
+          >
+            <span className="block w-6 h-0.5 bg-stone-800 transition-all duration-300" />
+            <span className="block w-6 h-0.5 bg-stone-800 transition-all duration-300" />
+            <span className="block w-6 h-0.5 bg-stone-800 transition-all duration-300" />
+          </button>
+        )}
       </div>
 
       {/* Mobile Menu */}
       <div
         ref={menuRef}
-        className={`md:hidden transition-all duration-300 overflow-hidden bg-white/98 backdrop-blur-md border-t border-stone-100 shadow-xl ${
-          menuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+        className={`lg:hidden transition-all duration-300 overflow-hidden bg-white/98 backdrop-blur-md border-t border-stone-100 shadow-xl ${
+          menuOpen ? "max-h-96 opacity-100 pointer-events-auto" : "max-h-0 opacity-0 pointer-events-none"
         }`}
+      >
+        {/* Dedicated close button for mobile menu */}
+        {menuOpen && (
+          <button
+            onClick={() => setMenuOpen(false)}
+            className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center text-stone-800 bg-stone-100 rounded-full shadow hover:bg-stone-200 transition z-50"
+            aria-label="Close menu"
+          >
+            <span className="text-2xl">&#10005;</span>
+          </button>
+        )}
       >
         <nav className="flex flex-col px-4 py-4 gap-1">
           {links.map((l) => (

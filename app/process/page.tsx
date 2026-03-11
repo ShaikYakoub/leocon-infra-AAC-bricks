@@ -293,13 +293,19 @@ export default function ProcessPage() {
                   <p className="text-sm font-bold text-stone-900">{mat.name}</p>
                 </div>
                 <div className="flex-1 flex items-center gap-3">
-                  <div className="flex-1 bg-stone-100 rounded-full h-8 overflow-hidden">
+                  <div className="flex-1 bg-stone-100 rounded-full h-8 overflow-hidden relative">
                     <div
                       className={`${mat.color} h-full flex items-center justify-end px-3 text-xs font-bold text-white transition-all duration-700`}
                       style={{ width: mat.pct }}
                     >
-                      {mat.pct}
+                      {/* Percentage label removed from inside bar */}
                     </div>
+                    <span
+                      className="absolute right-0 top-1/2 -translate-y-1/2 text-xs font-bold text-stone-700 pr-2"
+                      style={{ minWidth: "40px" }}
+                    >
+                      {mat.pct}
+                    </span>
                   </div>
                   <div className="w-24 text-left">
                     <p className="text-sm text-stone-600 font-semibold">
@@ -342,42 +348,31 @@ export default function ProcessPage() {
             {steps.map((step, i) => (
               <div
                 key={step.n}
-                className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start"
+                className="bg-white border border-stone-200 rounded-3xl p-8 hover:border-orange-300 hover:shadow-xl transition-all duration-300"
               >
-                <div className="lg:col-span-1 flex lg:flex-col items-center lg:items-start gap-4">
-                  <div className="w-16 h-16 rounded-full bg-orange-100 border-2 border-orange-400 flex items-center justify-center shrink-0">
-                    <span className="text-orange-600 font-black text-xl">
-                      {step.n}
-                    </span>
-                  </div>
-                  {i < steps.length - 1 && (
-                    <div className="hidden lg:block w-px flex-1 min-h-[120px] bg-gradient-to-b from-orange-300 to-transparent" />
-                  )}
-                </div>
-
-                <div className="lg:col-span-11 bg-white border border-stone-200 rounded-3xl p-8 hover:border-orange-300 hover:shadow-xl transition-all duration-300">
-                  <h3 className="text-2xl font-black text-stone-900 mb-3">
+                <div className="mb-3">
+                  <h3 className="text-2xl font-black text-stone-900">
                     {step.title}
                   </h3>
-                  <p className="text-stone-600 leading-relaxed mb-5">
-                    {step.desc}
-                  </p>
+                </div>
+                <p className="text-stone-600 leading-relaxed mb-5">
+                  {step.desc}
+                </p>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-5 border-t border-stone-100">
-                    <div>
-                      <p className="text-xs uppercase tracking-wider text-stone-400 font-semibold mb-2">
-                        Equipment
-                      </p>
-                      <p className="text-sm text-stone-700">{step.equipment}</p>
-                    </div>
-                    <div>
-                      <p className="text-xs uppercase tracking-wider text-stone-400 font-semibold mb-2">
-                        Output
-                      </p>
-                      <p className="text-sm font-semibold text-orange-600">
-                        {step.output}
-                      </p>
-                    </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-5 border-t border-stone-100">
+                  <div>
+                    <p className="text-xs uppercase tracking-wider text-stone-400 font-semibold mb-2">
+                      Equipment
+                    </p>
+                    <p className="text-sm text-stone-700">{step.equipment}</p>
+                  </div>
+                  <div>
+                    <p className="text-xs uppercase tracking-wider text-stone-400 font-semibold mb-2">
+                      Output
+                    </p>
+                    <p className="text-sm font-semibold text-orange-600">
+                      {step.output}
+                    </p>
                   </div>
                 </div>
               </div>
