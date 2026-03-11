@@ -16,6 +16,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
+  const closeTimeRef = useRef<number>(0);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60);
@@ -25,12 +26,20 @@ export default function Navbar() {
 
   // Close menu on outside click
   useEffect(() => {
-    if (!menuOpen) return;
+    if (!menuOpen) {
+      closeTimeRef.current = Date.now();
+      return;
+    }
+
     const handler = (e: MouseEvent) => {
+      // Ignore clicks within 100ms of closing to prevent immediate reopening
+      if (Date.now() - closeTimeRef.current < 100) return;
+      
       if (menuRef.current && !menuRef.current.contains(e.target as Node)) {
         setMenuOpen(false);
       }
     };
+    
     document.addEventListener("mousedown", handler);
     return () => document.removeEventListener("mousedown", handler);
   }, [menuOpen]);
@@ -92,7 +101,8 @@ export default function Navbar() {
         <button
           onClick={(e) => {
             e.stopPropagation();
-            setMenuOpen(!menuOpen);
+            e.preventDefault();
+            setMenuOpen((prev) => !prev);
           }}
           className="md:hidden flex flex-col justify-center items-center w-10 h-10 gap-1.5 rounded-lg hover:bg-stone-100 transition"
           aria-label={menuOpen ? "Close menu" : "Open menu"}
@@ -115,8 +125,11 @@ export default function Navbar() {
         className={`md:hidden transition-all duration-300 overflow-hidden bg-white/98 backdrop-blur-md border-t border-stone-100 shadow-xl ${
           menuOpen ? "max-h-96 opacity-100 pointer-events-auto" : "max-h-0 opacity-0 pointer-events-none"
         }`}
+        onClick={(e) => {
+          e.stopPropagation();
+        }}
       >
-        <nav className="flex flex-col px-4 py-4 gap-1" onClick={(e) => e.stopPropagation()}>
+        <nav className="flex flex-col px-4 py-4 gap-1">
           {links.map((l) => (
             <a
               key={l.href}
