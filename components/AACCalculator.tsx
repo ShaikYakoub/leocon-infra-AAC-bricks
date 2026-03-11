@@ -75,7 +75,7 @@ export default function AACCalculator() {
             <span className="w-1.5 h-1.5 rounded-full bg-red-400" />
             Conventional Red Clay Bricks
           </div>
-          <p className="text-7xl font-black text-red-500 tabular-nums mb-2">
+          <p className="text-5xl font-black text-red-500 tabular-nums mb-2">
             {redBricks.toLocaleString()}
           </p>
           <p className="text-stone-500 text-sm font-semibold uppercase tracking-wide">
@@ -92,7 +92,7 @@ export default function AACCalculator() {
             <span className="w-1.5 h-1.5 rounded-full bg-orange-500 animate-pulse" />
             LEOCON AAC Blocks
           </div>
-          <div className="grid grid-cols-3 gap-4 mb-4">
+          <div className="grid grid-cols-3 gap-6 mb-4">
             {[
               { label: "4-Inch", count: aac4, perM3: AAC_4_INCH_PER_M3 },
               { label: "6-Inch", count: aac6, perM3: AAC_6_INCH_PER_M3 },
