@@ -42,7 +42,8 @@ export default function ProcessPage() {
             "@context": "https://schema.org",
             "@type": "HowTo",
             name: "LEOCON AAC Block Manufacturing Process",
-            description: "Complete AAC block manufacturing process from raw materials to finished product",
+            description:
+              "Complete AAC block manufacturing process from raw materials to finished product",
             steps: steps.map((step, idx) => ({
               "@type": "HowToStep",
               position: idx + 1,

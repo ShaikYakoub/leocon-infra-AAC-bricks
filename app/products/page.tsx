@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "LEOCON AAC Blocks – Lightweight & Durable Building Materials",
     description:
-      "Premium AAC blocks in multiple sizes. Cost-effective, fire-resistant, and earthquake-safe. Available in 2\", 3\", 4\", 6\", and 9\" thicknesses.",
+      'Premium AAC blocks in multiple sizes. Cost-effective, fire-resistant, and earthquake-safe. Available in 2", 3", 4", 6", and 9" thicknesses.',
     type: "website",
     url: "https://leoconinfra.com/products",
   },
