@@ -92,7 +92,7 @@ export default function AACCalculator() {
             <span className="w-1.5 h-1.5 rounded-full bg-orange-500 animate-pulse" />
             LEOCON AAC Blocks
           </div>
-          <div className="grid grid-cols-3 gap-10 mb-4">
+          <div className="flex justify-center gap-8 mb-4 flex-wrap mx-auto max-w-2xl">
             {[
               { label: "4-Inch", count: aac4, perM3: AAC_4_INCH_PER_M3 },
               { label: "6-Inch", count: aac6, perM3: AAC_6_INCH_PER_M3 },
@@ -100,7 +100,7 @@ export default function AACCalculator() {
             ].map(({ label, count, perM3 }) => (
               <div
                 key={label}
-                className="flex flex-col items-center bg-orange-50 border border-orange-100 rounded-2xl p-3"
+                className="flex flex-col items-center bg-orange-50 border border-orange-100 rounded-2xl p-3 w-28"
               >
                 <p className="text-2xl font-black text-orange-600 tabular-nums">
                   {count.toLocaleString()}
