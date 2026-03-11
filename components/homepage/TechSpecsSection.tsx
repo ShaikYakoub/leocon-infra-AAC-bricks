@@ -42,49 +42,51 @@ export default function TechSpecsSection() {
           </h2>
         </div>
         <div className="rounded-3xl overflow-hidden border border-stone-200">
-          <table className="w-full text-left">
-            <thead>
-              <tr className="bg-orange-50 border-b border-orange-200">
-                <th className="px-8 py-5 text-orange-700 font-bold text-sm uppercase tracking-wider">
-                  Block Size
-                </th>
-                <th className="px-8 py-5 text-orange-700 font-bold text-sm uppercase tracking-wider">
-                  Dimensions (Inches)
-                </th>
-                <th className="px-8 py-5 text-orange-700 font-bold text-sm uppercase tracking-wider">
-                  Blocks / m³
-                </th>
-                <th className="px-8 py-5 text-orange-700 font-bold text-sm uppercase tracking-wider hidden md:table-cell">
-                  Best Use
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {technicalRows.map((row, i) => (
-                <tr
-                  key={row.size}
-                  className={`border-b border-stone-100 hover:bg-orange-50/50 transition-colors ${
-                    i % 2 === 0 ? "bg-stone-50" : "bg-white"
-                  }`}
-                >
-                  <td className="px-8 py-6 font-black text-stone-900 text-lg">
-                    {row.size}
-                  </td>
-                  <td className="px-8 py-6 text-stone-600 font-mono">
-                    {row.dim}
-                  </td>
-                  <td className="px-8 py-6">
-                    <span className="inline-block bg-orange-100 border border-orange-200 text-orange-700 font-bold px-3 py-1 rounded-full text-sm">
-                      {row.count}
-                    </span>
-                  </td>
-                  <td className="px-8 py-6 text-stone-400 text-sm hidden md:table-cell">
-                    {row.use}
-                  </td>
+          <div className="overflow-x-auto">
+            <table className="w-full min-w-[720px] text-left">
+              <thead>
+                <tr className="bg-orange-50 border-b border-orange-200">
+                  <th className="px-8 py-5 text-orange-700 font-bold text-sm uppercase tracking-wider">
+                    Block Size
+                  </th>
+                  <th className="px-8 py-5 text-orange-700 font-bold text-sm uppercase tracking-wider">
+                    Dimensions (Inches)
+                  </th>
+                  <th className="px-8 py-5 text-orange-700 font-bold text-sm uppercase tracking-wider">
+                    Blocks / m³
+                  </th>
+                  <th className="px-8 py-5 text-orange-700 font-bold text-sm uppercase tracking-wider">
+                    Best Use
+                  </th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {technicalRows.map((row, i) => (
+                  <tr
+                    key={row.size}
+                    className={`border-b border-stone-100 hover:bg-orange-50/50 transition-colors ${
+                      i % 2 === 0 ? "bg-stone-50" : "bg-white"
+                    }`}
+                  >
+                    <td className="px-8 py-6 font-black text-stone-900 text-lg">
+                      {row.size}
+                    </td>
+                    <td className="px-8 py-6 text-stone-600 font-mono">
+                      {row.dim}
+                    </td>
+                    <td className="px-8 py-6">
+                      <span className="inline-block bg-orange-100 border border-orange-200 text-orange-700 font-bold px-3 py-1 rounded-full text-sm">
+                        {row.count}
+                      </span>
+                    </td>
+                    <td className="px-8 py-6 text-stone-400 text-sm">
+                      {row.use}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </section>
