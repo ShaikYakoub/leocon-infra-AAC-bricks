@@ -1,3 +1,5 @@
+import type { ReactNode } from "react";
+
 type ValueItem = {
   icon: string;
   title: string;
@@ -12,7 +14,7 @@ export default function AboutValuesSection({
   values,
 }: AboutValuesSectionProps) {
   // Icon mapping
-  const iconMap: { [key: string]: JSX.Element } = {
+  const iconMap: Record<string, ReactNode> = {
     ENV: (
       <svg width="32" height="32" fill="none" viewBox="0 0 32 32">
         <circle cx="16" cy="16" r="16" fill="#4CAF50" />

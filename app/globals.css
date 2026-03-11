@@ -38,16 +38,6 @@ body {
   font-family: "Playfair Display", Georgia, serif;
 }
 
-/* Noise-grain overlay for premium texture */
-.noise::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
-  pointer-events: none;
-  z-index: 1;
-}
-
 /* Glowing orange underline effect */
 .underline-glow {
   position: relative;
@@ -68,11 +58,6 @@ body {
 /* Section label pill */
 .section-label {
   @apply inline-flex items-center gap-2 text-orange-600 text-xs font-bold uppercase tracking-[0.2em] bg-orange-100 border border-orange-200 px-4 py-1.5 rounded-full mb-5;
-}
-
-/* Card hover lift */
-.card-lift {
-  @apply transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl;
 }
 
 /* Gradient text */

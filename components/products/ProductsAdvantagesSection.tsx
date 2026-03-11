@@ -1,3 +1,5 @@
+import type { ReactNode } from "react";
+
 type Advantage = {
   icon: string;
   title: string;
@@ -12,7 +14,7 @@ export default function ProductsAdvantagesSection({
   advantages,
 }: ProductsAdvantagesSectionProps) {
   // Icon mapping
-  const iconMap: { [key: string]: JSX.Element } = {
+  const iconMap: Record<string, ReactNode> = {
     COST: (
       <svg width="28" height="28" fill="none" viewBox="0 0 28 28">
         <circle cx="14" cy="14" r="14" fill="#FFB347" />
