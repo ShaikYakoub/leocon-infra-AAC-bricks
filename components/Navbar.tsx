@@ -90,7 +90,10 @@ export default function Navbar() {
 
         {/* Mobile Hamburger / Close Button */}
         <button
-          onClick={() => setMenuOpen(!menuOpen)}
+          onClick={(e) => {
+            e.stopPropagation();
+            setMenuOpen(!menuOpen);
+          }}
           className="md:hidden flex flex-col justify-center items-center w-10 h-10 gap-1.5 rounded-lg hover:bg-stone-100 transition"
           aria-label={menuOpen ? "Close menu" : "Open menu"}
         >
@@ -113,7 +116,7 @@ export default function Navbar() {
           menuOpen ? "max-h-96 opacity-100 pointer-events-auto" : "max-h-0 opacity-0 pointer-events-none"
         }`}
       >
-        <nav className="flex flex-col px-4 py-4 gap-1">
+        <nav className="flex flex-col px-4 py-4 gap-1" onClick={(e) => e.stopPropagation()}>
           {links.map((l) => (
             <a
               key={l.href}
