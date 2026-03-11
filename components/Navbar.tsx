@@ -119,7 +119,7 @@ export default function Navbar() {
             <span className="text-2xl">&#10005;</span>
           </button>
         )}
-      >
+        
         <nav className="flex flex-col px-4 py-4 gap-1">
           {links.map((l) => (
             <a
