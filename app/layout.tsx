@@ -24,6 +24,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/footer-logo.png" type="image/png" />
+      </head>
       <body className="bg-[#f8f7f4] text-[#1a1a1a]">{children}</body>
     </html>
   );

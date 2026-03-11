@@ -1,5 +1,3 @@
-// config/aac-data.ts
-
 export type BlockSize = "9 Inch" | "6 Inch" | "4 Inch" | "3 Inch" | "2 Inch";
 
 export interface BlockMetrics {
