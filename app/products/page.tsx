@@ -2,7 +2,7 @@ import Navbar from "@/components/Navbar";
 import Image from "next/image";
 import Footer from "../../components/Footer";
 
-const WA = "YOUR_CLIENT_NUMBER";
+const WA = "7239922999"; // Updated WhatsApp number
 
 // Placeholder component for product images
 function ImgPlaceholder({
