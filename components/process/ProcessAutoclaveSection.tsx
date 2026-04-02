@@ -7,7 +7,7 @@ export default function ProcessAutoclaveSection() {
         <div>
           <div className="section-label">The Critical Step</div>
           <h2 className="font-display text-5xl font-black text-stone-900 mb-6 leading-tight">
-            Why <span className="gradient-text">Autoclaving</span> Matters
+            Why <span className="text-orange-500">Autoclaving</span> Matters
           </h2>
           <p className="text-stone-600 leading-relaxed mb-6">
             Autoclaving uses high-pressure steam curing to transform AAC and

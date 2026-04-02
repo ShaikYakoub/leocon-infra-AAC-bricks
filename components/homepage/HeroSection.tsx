@@ -3,8 +3,12 @@ type HeroSectionProps = {
 };
 
 export default function HeroSection({ waNumber }: HeroSectionProps) {
+  // Navbar height is 80px (h-20)
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+    <section
+      className="relative flex items-center overflow-hidden"
+      style={{ minHeight: "calc(100vh - 80px)", marginTop: "80px" }}
+    >
       <div className="absolute inset-0 z-0">
         <video
           autoPlay
@@ -18,13 +22,10 @@ export default function HeroSection({ waNumber }: HeroSectionProps) {
       </div>
       <div className="absolute inset-0 z-10 bg-black bg-opacity-60" />
 
-      <div className="relative z-20 max-w-7xl mx-auto px-4 md:px-12 pt-32 pb-24 w-full">
+      <div className="relative z-20 max-w-7xl mx-auto px-4 md:px-12 pt-6 pb-24 w-full">
         <div className="max-w-2xl">
-          <div className="section-label">
-            <span className="w-2 h-2 bg-orange-500 rounded-full animate-pulse" />
-            APIIC Mydukur · Kadapa, Andhra Pradesh
-          </div>
-          <h1 className="font-display text-6xl md:text-8xl font-black leading-[0.95] mb-6 text-white">
+          {/* Location label removed as requested */}
+          <h1 className="font-display text-5xl sm:text-6xl md:text-8xl font-black leading-[1.05] mb-6 text-white break-words max-w-full md:max-w-5xl mx-auto">
             Build <span className="gradient-text">Smarter.</span>
             <br />
             Build{" "}

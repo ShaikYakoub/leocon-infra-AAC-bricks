@@ -5,7 +5,8 @@ export default function ProcessQualitySection() {
         <div className="text-center mb-16">
           <div className="section-label mx-auto w-fit">Quality Assurance</div>
           <h2 className="font-display text-5xl md:text-6xl font-black text-stone-900 mb-5">
-            ISO-Grade Production Controls
+            <span className="text-orange-500">ISO-Grade</span> Production{" "}
+            <span className="text-orange-500">Controls</span>
           </h2>
         </div>
 

@@ -15,7 +15,7 @@ export default function AboutCtaSection({ waNumber }: AboutCtaSectionProps) {
       <div className="absolute inset-0 bg-black/60" aria-hidden="true" />
       <div className="relative max-w-4xl mx-auto text-center">
         <h2 className="font-display text-4xl md:text-6xl font-black mb-6 text-white">
-          Partner with LEOCON INFRA
+          Partner with <span className="text-orange-500">LEOCON INFRA</span>
         </h2>
         <p className="text-stone-300 text-lg mb-10 max-w-2xl mx-auto leading-relaxed">
           Whether you are a builder, contractor, architect, or homeowner - let's

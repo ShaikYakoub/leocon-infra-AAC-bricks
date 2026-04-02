@@ -7,7 +7,8 @@ export default function ProcessOverviewSection() {
             Production Line Tour
           </div>
           <h2 className="font-display text-5xl md:text-6xl font-black text-stone-900 mb-5">
-            See the Process in Action
+            See the <span className="text-orange-500">Process</span> in{" "}
+            <span className="text-orange-500">Action</span>
           </h2>
         </div>
         <video

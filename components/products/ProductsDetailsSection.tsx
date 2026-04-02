@@ -25,8 +25,12 @@ export default function ProductsDetailsSection({
     <section className="py-28 px-4 md:px-12">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
+          <span className="section-label mx-auto w-fit bg-orange-100 border border-orange-300 text-orange-700 text-[11px] font-bold uppercase tracking-widest px-3 py-1 rounded-full block mb-4">
+            Block Size Options
+          </span>
           <h2 className="font-display text-5xl md:text-6xl font-black text-stone-900 mb-5">
-            Sizes For All Your Application Needs
+            <span className="text-orange-500">Sizes</span> For All Your
+            Application <span className="text-orange-500">Needs</span>
           </h2>
           <p className="text-stone-500 text-lg max-w-2xl mx-auto">
             Choose the right AAC block size for your project - from interior
@@ -34,25 +38,23 @@ export default function ProductsDetailsSection({
           </p>
         </div>
 
-        <div className="space-y-16">
+        <div className="grid gap-12">
           {products.map((product, i) => (
             <div
               key={product.size}
-              className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${
-                i % 2 === 1 ? "lg:flex-row-reverse" : ""
-              }`}
+              className={`bg-white rounded-3xl shadow-xl border border-stone-200 flex flex-col lg:flex-row overflow-hidden ${i % 2 === 1 ? "lg:flex-row-reverse" : ""}`}
             >
-              <div className={i % 2 === 1 ? "lg:order-2" : ""}>
+              <div className="lg:w-1/2 flex items-center justify-center bg-stone-50">
                 <Image
                   src={product.image}
                   alt={product.imageAlt}
                   width={600}
                   height={450}
-                  className="rounded-2xl aspect-[4/3] object-cover border border-stone-200"
+                  className="aspect-[4/3] object-cover border border-stone-200 w-full h-full"
                 />
               </div>
-              <div className={i % 2 === 1 ? "lg:order-1" : ""}>
-                <div className="inline-flex items-center gap-2 bg-orange-100 border border-orange-200 text-orange-600 text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">
+              <div className="lg:w-1/2 p-8 flex flex-col justify-center">
+                <div className="inline-flex items-center gap-2 bg-orange-100 border border-orange-200 text-orange-600 text-xs font-bold uppercase tracking-widest py-1.5 rounded-full mb-4 w-fit px-3">
                   {product.size} Block
                 </div>
                 <h3 className="text-4xl font-black text-stone-900 mb-3">
@@ -106,7 +108,24 @@ export default function ProductsDetailsSection({
                       key={feat}
                       className="flex items-start gap-2 text-stone-600"
                     >
-                      <span className="text-orange-500 mt-1">v</span>
+                      <span className="mt-1">
+                        <svg
+                          width="18"
+                          height="18"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <circle cx="10" cy="10" r="10" fill="#fb923c" />
+                          <path
+                            d="M6 10.5L9 13.5L14 8.5"
+                            stroke="white"
+                            strokeWidth="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+                      </span>
                       <span>{feat}</span>
                     </li>
                   ))}

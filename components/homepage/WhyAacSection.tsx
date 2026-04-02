@@ -27,7 +27,8 @@ export default function WhyAacSection() {
       <div className="text-center mb-16">
         <div className="section-label mx-auto w-fit">The AAC Advantage</div>
         <h2 className="font-display text-5xl md:text-6xl font-black text-stone-900 mb-5">
-          Why Choose AAC Blocks?
+          Why Choose <span className="text-orange-500">AAC</span>{" "}
+          <span className="text-orange-500">Blocks</span>?
         </h2>
         <p className="text-stone-500 text-lg max-w-2xl mx-auto">
           Better material choices compound into massive savings across the
@@ -35,22 +36,6 @@ export default function WhyAacSection() {
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <BenefitCard icon="⚖️" title="Lightweight & Strong">
-          <p className="text-stone-500 leading-relaxed">
-            <strong className="text-stone-900">2.5× lighter</strong> than
-            conventional bricks -{" "}
-            <strong className="text-stone-900">66% lighter</strong>
-            than red clay bricks - while matching or exceeding structural
-            strength requirements.
-          </p>
-          <Image
-            src="/images/homepage/aac-honeycomb.jpg"
-            alt="AAC block honeycomb cross-section"
-            width={400}
-            height={300}
-            className="rounded-2xl aspect-[4/3] object-cover border border-stone-200"
-          />
-        </BenefitCard>
         <BenefitCard icon="🤲" title="Effortless Handling">
           <p className="text-stone-500 leading-relaxed">
             AAC blocks are so lightweight, they can be easily lifted and placed

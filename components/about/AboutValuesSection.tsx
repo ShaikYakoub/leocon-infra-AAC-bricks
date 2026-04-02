@@ -51,7 +51,7 @@ export default function AboutValuesSection({
         <div className="text-center mb-16">
           <div className="section-label mx-auto w-fit">What Drives Us</div>
           <h2 className="font-display text-5xl md:text-6xl font-black text-stone-900 mb-5">
-            Our Core Values
+            Our Core <span className="text-orange-500">Values</span>
           </h2>
           <p className="text-stone-500 text-lg max-w-2xl mx-auto">
             Four principles guide everything we do - from raw material sourcing
@@ -69,7 +69,15 @@ export default function AboutValuesSection({
                 {iconMap[v.icon] || v.icon}
               </div>
               <h3 className="text-2xl font-bold text-stone-900 mb-3">
-                {v.title}
+                {v.title.split(" ").map((word, idx) =>
+                  idx === 0 ? (
+                    <span key={idx} className="text-orange-500">
+                      {word}{" "}
+                    </span>
+                  ) : (
+                    word + " "
+                  ),
+                )}
               </h3>
               <p className="text-stone-600 leading-relaxed">{v.desc}</p>
             </div>

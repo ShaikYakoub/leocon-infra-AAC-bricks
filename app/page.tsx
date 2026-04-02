@@ -87,16 +87,7 @@ export default function Page() {
           }),
         }}
       />
-      <div className="flex justify-center py-6">
-        <Image
-          src={heroImg}
-          alt="LEOCON INFRA Premium AAC Blocks"
-          width={1200}
-          height={630}
-          priority
-          className="rounded-xl shadow-lg"
-        />
-      </div>
+      {/* Removed top hero image as requested */}
       <Navbar />
       <HeroSection waNumber={WA} />
       <WhyAacSection />

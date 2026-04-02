@@ -5,8 +5,8 @@ export default function Footer() {
   return (
     <footer className="bg-[#1c1410] border-t border-white/8 pt-20 pb-10 px-4 md:px-12">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
-        <div className="md:col-span-2 flex flex-col items-center md:items-start">
-          <div className="flex items-center gap-3 mb-6">
+        <div className="md:col-span-2 flex flex-col items-start">
+          <div className="flex items-center gap-3 mb-6 text-left w-full">
             <div className="w-14 h-14 flex items-center justify-center">
               <Image
                 src="/footer-logo.png"
@@ -16,8 +16,8 @@ export default function Footer() {
                 className="w-14 h-14 object-contain"
               />
             </div>
-            <div>
-              <span className="text-white font-black text-xl tracking-tight">
+            <div className="text-left">
+              <span className="text-white font-black text-xl tracking-tight block">
                 LEOCON INFRA
               </span>
               <span className="block text-orange-400 text-[10px] font-bold uppercase tracking-[0.2em]">
@@ -25,16 +25,16 @@ export default function Footer() {
               </span>
             </div>
           </div>
-          <p className="text-stone-400 leading-relaxed mb-6 max-w-sm text-center md:text-left">
+          <p className="text-stone-400 leading-relaxed mb-6 max-w-sm text-left">
             Manufacturer of premium Autoclaved Aerated Concrete blocks
             engineered for modern India. Stronger structures. Greener buildings.
           </p>
-          <div className="flex flex-col gap-2 mb-6">
+          <div className="flex flex-col gap-2 mb-6 items-start w-full">
             <a
               href="https://wa.me/7239922999"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 bg-orange-500/15 border border-orange-500/30 hover:bg-orange-500/25 text-orange-400 font-semibold px-5 py-2.5 rounded-full text-sm transition-all duration-300"
+              className="inline-flex items-center gap-2 bg-orange-500/15 border border-orange-500/30 hover:bg-orange-500/25 text-orange-400 font-semibold px-5 py-2.5 rounded-full text-sm transition-all duration-300 text-left"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -52,10 +52,10 @@ export default function Footer() {
         <div className="col-span-2 w-full">
           <div className="grid grid-cols-2 gap-6 text-center">
             <div>
-              <h4 className="text-white font-bold text-sm uppercase tracking-widest mb-6 text-center">
+              <h4 className="text-white font-bold text-sm uppercase tracking-widest mb-6 text-left">
                 Quick Links
               </h4>
-              <ul className="space-y-3">
+              <ul className="space-y-3 text-left">
                 {[
                   { label: "Home", href: "/" },
                   { label: "Products", href: "/products" },
@@ -66,7 +66,7 @@ export default function Footer() {
                   <li key={href}>
                     <a
                       href={href}
-                      className="text-stone-500 hover:text-orange-400 text-sm transition-colors duration-200"
+                      className="text-stone-500 hover:text-orange-400 text-sm transition-colors duration-200 block ml-0"
                     >
                       {label}
                     </a>
@@ -75,10 +75,10 @@ export default function Footer() {
               </ul>
             </div>
             <div>
-              <h4 className="text-white font-bold text-sm uppercase tracking-widest mb-6 text-center">
+              <h4 className="text-white font-bold text-sm uppercase tracking-widest mb-6 text-left">
                 Contact
               </h4>
-              <address className="not-italic text-stone-500 text-sm leading-loose">
+              <address className="not-italic text-stone-500 text-sm leading-loose text-left ml-0">
                 Plot-22
                 <br />
                 APIIC Mydukur
@@ -87,10 +87,10 @@ export default function Footer() {
                 <br />
                 India.
               </address>
-              <div className="mt-6 space-y-2">
+              <div className="mt-6 space-y-2 text-left ml-0">
                 <a
                   href="tel:+917239922999"
-                  className="flex items-center gap-2 text-stone-500 hover:text-orange-400 text-sm transition-colors duration-200 justify-center"
+                  className="flex items-center gap-2 text-stone-500 hover:text-orange-400 text-sm transition-colors duration-200 justify-start"
                 >
                   <svg
                     viewBox="0 0 24 24"
@@ -109,7 +109,7 @@ export default function Footer() {
                 </a>
                 <a
                   href="tel:+917239944999"
-                  className="flex items-center gap-2 text-stone-500 hover:text-orange-400 text-sm transition-colors duration-200 justify-center"
+                  className="flex items-center gap-2 text-stone-500 hover:text-orange-400 text-sm transition-colors duration-200 justify-start"
                 >
                   <svg
                     viewBox="0 0 24 24"
@@ -135,8 +135,23 @@ export default function Footer() {
         <p className="text-stone-600 text-xs text-center">
           &copy; {new Date().getFullYear()} LEOCON INFRA. All rights reserved.
         </p>
-        <p className="text-stone-700 text-xs text-center">
-          Manufactured under strict quality controls · APIIC Mydukur, Kadapa, AP
+        <p className="text-white text-xs text-center flex items-center justify-center gap-1">
+          A Website by{" "}
+          <a
+            href="https://maverickstechnovations.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center"
+            style={{ lineHeight: 0 }}
+          >
+            <Image
+              src="/maverick-logo.avif"
+              alt="Maverick Technovations Logo"
+              width={128}
+              height={128}
+              className="inline-block align-middle ml-2"
+            />
+          </a>
         </p>
       </div>
     </footer>

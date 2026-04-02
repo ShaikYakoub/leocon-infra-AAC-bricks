@@ -85,11 +85,13 @@ export default function ProductsAdvantagesSection({
         <div className="text-center mb-16">
           <div className="section-label mx-auto w-fit">Why Choose AAC</div>
           <h2 className="font-display text-5xl md:text-6xl font-black text-stone-900 mb-5">
-            Eight Unmatched Advantages
+            <span className="text-orange-500">Eight</span> Unmatched{" "}
+            <span className="text-orange-500">Advantages</span>
           </h2>
           <p className="text-stone-500 text-lg max-w-2xl mx-auto">
-            Every LEOCON AAC block delivers measurable benefits - from cost and
-            time savings to seismic safety and environmental responsibility.
+            Every <span className="text-orange-500 font-bold">LEOCON</span> AAC
+            block delivers measurable benefits - from cost and time savings to
+            seismic safety and environmental responsibility.
           </p>
         </div>
 

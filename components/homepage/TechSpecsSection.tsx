@@ -38,7 +38,7 @@ export default function TechSpecsSection() {
         <div className="text-center mb-16">
           <div className="section-label mx-auto w-fit">Product Range</div>
           <h2 className="font-display text-5xl md:text-6xl font-black mb-5 text-stone-900">
-            Technical Specifications
+            Technical <span className="text-orange-500">Specifications</span>
           </h2>
         </div>
         <div className="rounded-3xl overflow-hidden border border-stone-200">

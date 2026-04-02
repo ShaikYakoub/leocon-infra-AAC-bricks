@@ -21,7 +21,8 @@ export default function ProductsTechnicalSection({
         <div className="text-center mb-16">
           <div className="section-label mx-auto w-fit">Technical Data</div>
           <h2 className="font-display text-5xl md:text-6xl font-black text-stone-900 mb-5">
-            Industry-Standard Specifications
+            Industry-Standard{" "}
+            <span className="text-orange-500">Specifications</span>
           </h2>
           <p className="text-stone-500 text-lg max-w-2xl mx-auto">
             LEOCON AAC blocks meet stringent quality parameters across density

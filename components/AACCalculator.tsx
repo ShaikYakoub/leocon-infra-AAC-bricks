@@ -16,10 +16,24 @@ const SAVINGS = [
 
 export default function AACCalculator() {
   const [volume, setVolume] = useState<number>(100);
+  const [inputValue, setInputValue] = useState<string>("100");
 
   const handleVolumeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const val = parseFloat(e.target.value);
-    setVolume(isNaN(val) || val < 0 ? 0 : val);
+    const raw = e.target.value;
+    // Allow empty string for controlled input
+    if (raw === "") {
+      setInputValue("");
+      return;
+    }
+    // Remove leading zeros
+    const cleaned = raw.replace(/^0+(?!$)/, "");
+    // Only allow numbers
+    if (!/^\d{0,5}$/.test(cleaned)) return;
+    let val = parseInt(cleaned, 10);
+    if (isNaN(val) || val < 0) val = 0;
+    if (val > 99999) val = 99999;
+    setInputValue(cleaned);
+    setVolume(val);
   };
 
   const redBricks = volume * RED_BRICKS_PER_M3;
@@ -39,9 +53,13 @@ export default function AACCalculator() {
         </label>
         <div className="flex items-center justify-center gap-5">
           <button
-            onClick={() =>
-              setVolume((v) => Math.max(0, Math.round((v - 10) * 10) / 10))
-            }
+            onClick={() => {
+              setVolume((v) => {
+                const next = Math.max(0, Math.round((v - 10) * 10) / 10);
+                setInputValue(next === 0 ? "" : String(next));
+                return next;
+              });
+            }}
             className="w-14 h-14 rounded-full bg-stone-100 hover:bg-stone-200 border border-stone-200 hover:border-stone-300 text-3xl font-light text-stone-600 transition-all duration-200 flex items-center justify-center"
             aria-label="Decrease"
           >
@@ -49,16 +67,26 @@ export default function AACCalculator() {
           </button>
           <div className="relative">
             <input
-              type="number"
+              type="text"
+              inputMode="numeric"
+              pattern="[0-9]*"
               id="calc-volume"
               min="0"
-              value={volume}
+              max="99999"
+              value={inputValue}
               onChange={handleVolumeChange}
               className="w-44 text-center text-5xl font-black text-stone-900 bg-transparent border-b-2 border-orange-500 focus:outline-none focus:border-orange-400 pb-2 transition-colors [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
             />
           </div>
           <button
-            onClick={() => setVolume((v) => Math.round((v + 10) * 10) / 10)}
+            onClick={() => {
+              setVolume((v) => {
+                let next = Math.round((v + 10) * 10) / 10;
+                if (next > 99999) next = 99999;
+                setInputValue(String(next));
+                return next;
+              });
+            }}
             className="w-14 h-14 rounded-full bg-stone-100 hover:bg-stone-200 border border-stone-200 hover:border-stone-300 text-3xl font-light text-stone-600 transition-all duration-200 flex items-center justify-center"
             aria-label="Increase"
           >
@@ -75,9 +103,11 @@ export default function AACCalculator() {
             <span className="w-1.5 h-1.5 rounded-full bg-red-400" />
             Conventional Red Clay Bricks
           </div>
-          <p className="text-5xl font-black text-red-500 tabular-nums mb-2">
-            {redBricks.toLocaleString()}
-          </p>
+          <div className="flex justify-center">
+            <span className="text-5xl font-black text-red-500 tabular-nums mb-2">
+              {redBricks.toLocaleString()}
+            </span>
+          </div>
           <p className="text-stone-500 text-sm font-semibold uppercase tracking-wide">
             Bricks Required
           </p>
@@ -85,22 +115,23 @@ export default function AACCalculator() {
             ({RED_BRICKS_PER_M3} per m³)
           </p>
         </div>
-
-        {/* AAC Blocks */}
         <div className="bg-stone-50 p-10 text-center mt-2">
           <div className="inline-flex items-center gap-2 bg-orange-100 border border-orange-200 text-orange-600 text-[10px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full mb-6">
             <span className="w-1.5 h-1.5 rounded-full bg-orange-500 animate-pulse" />
             LEOCON AAC Blocks
           </div>
-          <div className="flex justify-center gap-8 mb-4 flex-wrap mx-auto max-w-2xl">
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-8 mb-4 mx-auto max-w-2xl">
             {[
               { label: "4-Inch", count: aac4, perM3: AAC_4_INCH_PER_M3 },
               { label: "6-Inch", count: aac6, perM3: AAC_6_INCH_PER_M3 },
               { label: "9-Inch", count: aac9, perM3: AAC_9_INCH_PER_M3 },
-            ].map(({ label, count, perM3 }) => (
+            ].map(({ label, count, perM3 }, idx) => (
               <div
                 key={label}
-                className="flex flex-col items-center bg-orange-50 border border-orange-100 rounded-2xl p-3 w-28"
+                className={
+                  "flex flex-col items-center bg-orange-50 border border-orange-100 rounded-2xl p-3 w-28" +
+                  (idx === 2 ? " col-span-2 justify-self-center" : "")
+                }
               >
                 <p className="text-2xl font-black text-orange-600 tabular-nums">
                   {count.toLocaleString()}

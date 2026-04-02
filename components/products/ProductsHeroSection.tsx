@@ -12,7 +12,7 @@ export default function ProductsHeroSection({
           <span className="w-2 h-2 bg-orange-500 rounded-full animate-pulse" />
           Product Range
         </div>
-        <h1 className="font-display text-6xl md:text-8xl font-black leading-[0.95] mb-6 text-stone-900">
+        <h1 className="font-display text-5xl sm:text-6xl md:text-8xl font-black leading-[1.05] mb-6 text-stone-900 break-words max-w-full md:max-w-5xl mx-auto">
           LEOCON <span className="gradient-text">AAC Blocks</span>
         </h1>
         <p className="text-lg md:text-xl text-stone-600 leading-relaxed max-w-3xl mb-12">

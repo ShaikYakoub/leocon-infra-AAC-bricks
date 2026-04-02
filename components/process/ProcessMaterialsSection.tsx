@@ -20,7 +20,7 @@ export default function ProcessMaterialsSection({
             Material Composition
           </div>
           <h2 className="font-display text-5xl font-black text-stone-900 mb-5">
-            What Goes Into 1 m3 of AAC
+            What Goes Into 1 m3 of <span className="text-orange-500">AAC</span>
           </h2>
         </div>
         <div className="space-y-4 mb-12">

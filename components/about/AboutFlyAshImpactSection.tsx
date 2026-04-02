@@ -7,7 +7,8 @@ export default function AboutFlyAshImpactSection() {
         <div>
           <div className="section-label">Environmental Impact</div>
           <h2 className="font-display text-5xl font-black text-stone-900 mb-6 leading-tight">
-            Turning Waste into <span className="gradient-text">Strength</span>
+            Turning <span className="text-orange-500">Waste</span> into{" "}
+            <span className="text-orange-500">Strength</span>
           </h2>
           <div className="space-y-4 text-stone-600 leading-relaxed">
             <p>
@@ -43,10 +44,13 @@ export default function AboutFlyAshImpactSection() {
 
           <div className="mt-8 p-6 bg-orange-50 border-l-4 border-orange-500 rounded-lg">
             <p className="text-sm text-orange-900 font-semibold">
-              With 15,000 m3 annual capacity, LEOCON INFRA consumes
-              approximately
-              <strong>7,800 tons of fly ash per year</strong> - waste that would
-              otherwise pollute soil and water.
+              With 15,000 m3 annual capacity,{" "}
+              <span className="text-orange-500">LEOCON INFRA</span> consumes
+              approximately{" "}
+              <strong className="text-orange-500">
+                7,800 tons of fly ash per year
+              </strong>{" "}
+              - waste that would otherwise pollute soil and water.
             </p>
           </div>
         </div>

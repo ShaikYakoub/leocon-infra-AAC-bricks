@@ -17,7 +17,7 @@ export default function ProductsCtaSection({
       <div className="absolute inset-0 bg-black/60" aria-hidden="true" />
       <div className="relative max-w-4xl mx-auto text-center">
         <h2 className="font-display text-4xl md:text-6xl font-black mb-6 text-white">
-          Ready to Build with LEOCON?
+          Ready to <span className="text-orange-500">Build</span> with LEOCON?
         </h2>
         <p className="text-stone-300 text-lg mb-10 max-w-2xl mx-auto leading-relaxed">
           Get a detailed quote, technical consultation, or schedule a site visit

@@ -19,7 +19,8 @@ export default function AboutMissionVisionSection() {
               Our Mission
             </div>
             <h2 className="text-4xl font-black text-stone-900 mb-4">
-              Smarter, Stronger, Sustainable
+              <span className="text-orange-500">Smarter</span>,{" "}
+              <span className="text-orange-500">Stronger</span>, Sustainable
             </h2>
             <p className="text-stone-600 leading-relaxed">
               To revolutionize India's construction sector by providing
@@ -34,7 +35,8 @@ export default function AboutMissionVisionSection() {
               Our Vision
             </div>
             <h2 className="text-4xl font-black text-stone-900 mb-4">
-              Leading the Green Building Revolution
+              Leading the{" "}
+              <span className="text-orange-500">Green Building Revolution</span>
             </h2>
             <p className="text-stone-600 leading-relaxed">
               To become Andhra Pradesh's most trusted AAC block manufacturer and

@@ -14,12 +14,13 @@ export default function ProcessStepsSection({
   steps,
 }: ProcessStepsSectionProps) {
   return (
-    <section className="py-28 px-4 md:px-12">
+    <section id="process-steps" className="py-28 px-4 md:px-12">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <div className="section-label mx-auto w-fit">Step-by-Step</div>
           <h2 className="font-display text-5xl md:text-6xl font-black text-stone-900 mb-5">
-            Complete Production Cycle
+            Complete <span className="text-orange-500">Production</span>{" "}
+            <span className="text-orange-500">Cycle</span>
           </h2>
         </div>
 

@@ -32,15 +32,15 @@ export default function ProcessSection() {
         <div className="text-center mb-16">
           <div className="section-label mx-auto w-fit">Behind the Block</div>
           <h2 className="font-display text-5xl md:text-6xl font-black mb-5 text-white">
-            How It&apos;s Made
+            How It&apos;s <span className="text-orange-500">Made</span>
           </h2>
           <p className="text-stone-400 text-lg max-w-xl mx-auto">
             ISO-grade precision at every stage. Raw material to ready-to-lay
             block in 12 hours.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
-          <div className="md:sticky md:top-28">
+        <div className="flex flex-col gap-16 items-start">
+          <div>
             <video
               autoPlay
               muted
@@ -57,7 +57,7 @@ export default function ProcessSection() {
               Live footage · LEOCON INFRA Plant · APIIC Mydukur, Kadapa
             </p>
           </div>
-          <div className="pt-4">
+          <div className="pt-4 w-full">
             <ProcessStep
               n="1"
               title="Batching & Mixing"

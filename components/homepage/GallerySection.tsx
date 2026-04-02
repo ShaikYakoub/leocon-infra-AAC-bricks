@@ -7,7 +7,7 @@ export default function GallerySection() {
         <div className="text-center mb-16">
           <div className="section-label mx-auto w-fit">Gallery</div>
           <h2 className="font-display text-5xl md:text-6xl font-black mb-5 text-stone-900">
-            LEOCON in the Field
+            <span className="text-orange-500">LEOCON</span> in the Field
           </h2>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">

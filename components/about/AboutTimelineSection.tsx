@@ -16,11 +16,11 @@ export default function AboutTimelineSection({
         <div className="text-center mb-16">
           <div className="section-label mx-auto w-fit">Our Journey</div>
           <h2 className="font-display text-5xl md:text-6xl font-black text-stone-900 mb-5">
-            A Century of Innovation
+            A Century of <span className="text-orange-500">Innovation</span>
           </h2>
           <p className="text-stone-500 text-lg max-w-2xl mx-auto">
             AAC technology has evolved from a Swedish invention in 1920 to a
-            global standard. LEOCON INFRA brings this legacy to Kadapa.
+            global standard. LEOCON INFRA brings this legacy to You.
           </p>
         </div>
 
