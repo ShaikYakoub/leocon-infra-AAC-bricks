@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 
 const WHATSAPP_NUMBER = "7239922999";
@@ -50,11 +51,12 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between h-20">
         {/* Logo */}
         <a href="#" className="flex items-center gap-3">
-          <img
+          <Image
             src="/logo.png"
             alt="LEOCON Logo"
+            width={64}
+            height={64}
             className="w-16 h-16 object-contain"
-            style={{ background: "none" }}
           />
           <div>
             <span className="text-stone-900 font-black text-lg tracking-tight leading-none">

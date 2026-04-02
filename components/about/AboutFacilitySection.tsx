@@ -28,7 +28,6 @@ export default function AboutFacilitySection({
             width={900}
             height={506}
             className="rounded-2xl aspect-video object-cover border border-stone-200"
-            priority
           />
           <Image
             src="/images/about/interior-cutting-floor.jpg"
@@ -36,7 +35,6 @@ export default function AboutFacilitySection({
             width={900}
             height={506}
             className="rounded-2xl aspect-video object-cover border border-stone-200"
-            priority
           />
         </div>
 

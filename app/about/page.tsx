@@ -29,7 +29,10 @@ export const metadata: Metadata = {
     description:
       "Meet LEOCON INFRA: A trusted AAC block manufacturer committed to sustainable construction and quality excellence.",
     type: "website",
-    url: "https://leoconinfra.com/about",
+    url: "https://leoconinfra.com/about/",
+  },
+  alternates: {
+    canonical: "https://leoconinfra.com/about/",
   },
 };
 

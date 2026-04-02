@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -7,9 +8,11 @@ export default function Footer() {
         <div className="md:col-span-2 flex flex-col items-center md:items-start">
           <div className="flex items-center gap-3 mb-6">
             <div className="w-14 h-14 flex items-center justify-center">
-              <img
+              <Image
                 src="/footer-logo.png"
                 alt="LEOCON Footer Logo"
+                width={56}
+                height={56}
                 className="w-14 h-14 object-contain"
               />
             </div>

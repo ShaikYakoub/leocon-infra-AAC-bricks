@@ -21,7 +21,6 @@ export default function ProcessAutoclaveSection() {
             width={900}
             height={675}
             className="rounded-2xl aspect-[4/3] object-cover border border-stone-200"
-            priority
           />
         </div>
       </div>

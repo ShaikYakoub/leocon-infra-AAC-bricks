@@ -34,7 +34,10 @@ export const metadata: Metadata = {
     description:
       'Premium AAC blocks in multiple sizes. Cost-effective, fire-resistant, and earthquake-safe. Available in 2", 3", 4", 6", and 9" thicknesses.',
     type: "website",
-    url: "https://leoconinfra.com/products",
+    url: "https://leoconinfra.com/products/",
+  },
+  alternates: {
+    canonical: "https://leoconinfra.com/products/",
   },
 };
 

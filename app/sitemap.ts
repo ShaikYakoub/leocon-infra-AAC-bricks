@@ -1,5 +1,7 @@
 import type { MetadataRoute } from "next";
 
+export const dynamic = "force-static";
+
 const baseUrl = "https://leoconinfra.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -11,19 +13,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
-      url: `${baseUrl}/products`,
+      url: `${baseUrl}/products/`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/about`,
+      url: `${baseUrl}/about/`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/process`,
+      url: `${baseUrl}/process/`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,

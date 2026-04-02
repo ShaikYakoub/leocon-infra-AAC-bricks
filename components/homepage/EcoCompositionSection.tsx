@@ -48,7 +48,6 @@ export default function EcoCompositionSection() {
           width={600}
           height={600}
           className="rounded-2xl shadow-lg aspect-square object-cover"
-          priority
         />
       </div>
     </section>

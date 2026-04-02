@@ -49,7 +49,6 @@ export default function WhyAacSection() {
             width={400}
             height={300}
             className="rounded-2xl aspect-[4/3] object-cover border border-stone-200"
-            priority
           />
         </BenefitCard>
         <BenefitCard icon="🤲" title="Effortless Handling">
@@ -63,7 +62,6 @@ export default function WhyAacSection() {
             width={400}
             height={300}
             className="rounded-2xl aspect-[4/3] object-cover border border-stone-200"
-            priority
           />
         </BenefitCard>
         <BenefitCard icon="🏗️" title="Precision Dimensions">
@@ -79,7 +77,6 @@ export default function WhyAacSection() {
             width={400}
             height={300}
             className="rounded-2xl aspect-[4/3] object-cover border border-stone-200"
-            priority
           />
         </BenefitCard>
         <BenefitCard icon="🛡️" title="Built-in Safety">
@@ -95,7 +92,6 @@ export default function WhyAacSection() {
             width={400}
             height={300}
             className="rounded-2xl aspect-[4/3] object-cover border border-stone-200"
-            priority
           />
         </BenefitCard>
       </div>

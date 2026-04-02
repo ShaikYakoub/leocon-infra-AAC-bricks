@@ -49,7 +49,6 @@ export default function ProductsDetailsSection({
                   width={600}
                   height={450}
                   className="rounded-2xl aspect-[4/3] object-cover border border-stone-200"
-                  priority
                 />
               </div>
               <div className={i % 2 === 1 ? "lg:order-1" : ""}>

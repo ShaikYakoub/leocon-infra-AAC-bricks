@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import CalculatorSection from "@/components/homepage/CalculatorSection";
@@ -9,6 +10,7 @@ import HeroSection from "@/components/homepage/HeroSection";
 import ProcessSection from "@/components/homepage/ProcessSection";
 import TechSpecsSection from "@/components/homepage/TechSpecsSection";
 import WhyAacSection from "@/components/homepage/WhyAacSection";
+import Image from "next/image";
 
 const WA = "7239922999";
 
@@ -36,6 +38,8 @@ export const metadata: Metadata = {
     locale: "en_IN",
   },
 };
+
+const heroImg = "/images/about/plant-exterior-wide.jpg";
 
 export default function Page() {
   return (
@@ -83,6 +87,16 @@ export default function Page() {
           }),
         }}
       />
+      <div className="flex justify-center py-6">
+        <Image
+          src={heroImg}
+          alt="LEOCON INFRA Premium AAC Blocks"
+          width={1200}
+          height={630}
+          priority
+          className="rounded-xl shadow-lg"
+        />
+      </div>
       <Navbar />
       <HeroSection waNumber={WA} />
       <WhyAacSection />

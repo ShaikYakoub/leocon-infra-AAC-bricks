@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 
 const siteUrl = "https://leoconinfra.com";
@@ -6,8 +7,24 @@ const siteName = "LEOCON INFRA";
 const description =
   "Premium Autoclaved Aerated Concrete (AAC) blocks engineered for faster construction, lower costs, and sustainable building. India's trusted AAC manufacturer in Kadapa, Andhra Pradesh.";
 
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter",
+});
+
+const playfairDisplay = Playfair_Display({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-playfair",
+});
+
 export const metadata: Metadata = {
-  title: "LEOCON INFRA – Premium AAC Blocks | Kadapa, AP",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "LEOCON INFRA – Premium AAC Blocks | Kadapa, AP",
+    template: "%s | LEOCON INFRA",
+  },
   description,
   keywords: [
     "AAC blocks",
@@ -110,7 +127,11 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="bg-[#f8f7f4] text-[#1a1a1a]">{children}</body>
+      <body
+        className={`${inter.variable} ${playfairDisplay.variable} bg-[#f8f7f4] text-[#1a1a1a]`}
+      >
+        {children}
+      </body>
     </html>
   );
 }

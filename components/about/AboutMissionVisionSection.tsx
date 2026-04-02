@@ -11,7 +11,6 @@ export default function AboutMissionVisionSection() {
             width={600}
             height={600}
             className="rounded-2xl aspect-square object-cover border border-stone-200"
-            priority
           />
         </div>
         <div className="space-y-10">

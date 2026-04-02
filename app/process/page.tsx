@@ -28,7 +28,10 @@ export const metadata: Metadata = {
     description:
       "Step-by-step AAC block manufacturing process featuring ISO-certified autoclaving and rigorous quality control.",
     type: "website",
-    url: "https://leoconinfra.com/process",
+    url: "https://leoconinfra.com/process/",
+  },
+  alternates: {
+    canonical: "https://leoconinfra.com/process/",
   },
 };
 

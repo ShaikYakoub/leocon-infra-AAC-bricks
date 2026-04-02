@@ -18,7 +18,6 @@ export default function GallerySection() {
               width={800}
               height={800}
               className="rounded-2xl aspect-square object-cover border border-stone-200"
-              priority
             />
           </div>
           <Image
@@ -27,7 +26,6 @@ export default function GallerySection() {
             width={400}
             height={400}
             className="rounded-2xl aspect-square object-cover border border-stone-200"
-            priority
           />
           <Image
             src="/images/homepage/gallery-aerial-plant.jpg"
@@ -35,7 +33,6 @@ export default function GallerySection() {
             width={400}
             height={400}
             className="rounded-2xl aspect-square object-cover border border-stone-200"
-            priority
           />
           <Image
             src="/images/homepage/gallery-engineer-measuring.jpg"
@@ -43,7 +40,6 @@ export default function GallerySection() {
             width={400}
             height={400}
             className="rounded-2xl aspect-square object-cover border border-stone-200"
-            priority
           />
           <Image
             src="/images/homepage/gallery-block-closeup.jpg"
@@ -51,7 +47,6 @@ export default function GallerySection() {
             width={400}
             height={400}
             className="rounded-2xl aspect-square object-cover border border-stone-200"
-            priority
           />
         </div>
       </div>
